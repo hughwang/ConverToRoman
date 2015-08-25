@@ -1,31 +1,6 @@
-from django.shortcuts import render
-from roman.forms import PostForm
-from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
-
-from dbgp.client import brk
-
-def index(request):
-    #brk(host='127.0.0.1', port=53891)
-    if request.method == 'GET':
-        form = PostForm()
-    else:
-        form = PostForm(request.POST) # Bind data from request.POST into a PostForm
- 
-        # If data is valid, proceeds to create a new post and redirect the user
-        if form.is_valid():
-            original_number = form.cleaned_data['original_number']
-            original_number = int(original_number)
-            roman_number = convert_to_roman(original_number)
-            context = {
-                'original_number' : original_number,
-                'result' : roman_number
-            }
-            return render(request, 'roman/result.html', context)
- 
-    return render(request, 'roman/index.html', {
-        'form': form,
-    })
+#!/usr/bin/env python
+import os
+import sys
 
 def convert_to_roman (original_number):
     convert_table = (
@@ -51,7 +26,6 @@ def convert_to_roman (original_number):
     #  x = x - v
 
     #3.Repeat stages 1 and 2 until you get zero result of x.
-    
     result_list=[]
     while(original_number > 0):
         for item in reversed(convert_table):
@@ -63,3 +37,15 @@ def convert_to_roman (original_number):
         return "".join(result_list)
 
  
+    
+
+
+if __name__ == "__main__":
+    print convert_to_roman(3999)
+    
+    
+    
+
+
+
+
