@@ -3,10 +3,8 @@ from roman.forms import PostForm
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-from dbgp.client import brk
 
 def index(request):
-    #brk(host='127.0.0.1', port=53891)
     if request.method == 'GET':
         form = PostForm()
     else:
