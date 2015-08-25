@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(PROJECT_PATH, '..'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -21,8 +23,8 @@ SECRET_KEY = '@wd$8ra_mh2gje5767ubxq6imw5kzn%!)d+&+1g9@+m6mf-0k-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 TEMPLATE_DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -63,6 +65,14 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash if there is a path component (optional in other cases).
+# Examples: "http://media.lawrence.com", "http://example.com/media/"
+MEDIA_URL = 'http://127.0.0.1:8000/media/'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

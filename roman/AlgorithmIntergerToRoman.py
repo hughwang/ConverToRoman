@@ -1,8 +1,7 @@
-#!/usr/bin/env python
-import os
-import sys
+import re
 
 def convert_to_roman (original_number):
+    # asume original_number is an integer
     convert_table = (
         {'decimal': 1, 'roman': 'I'},
         {'decimal': 4, 'roman': 'IV'},
@@ -19,6 +18,7 @@ def convert_to_roman (original_number):
         {'decimal': 1000, 'roman': 'M'},        
     )
     
+    # to convert x into roman numerial:
     #1.From the above table, find the highest 'decimal' value v that is less than or equal to the 'decimal' number x 
     #  and its corresponding roman numeral n:
     
@@ -26,26 +26,14 @@ def convert_to_roman (original_number):
     #  x = x - v
 
     #3.Repeat stages 1 and 2 until you get zero result of x.
+    
     result_list=[]
     while(original_number > 0):
-        for item in reversed(convert_table):
+        # visit the convert_table in reversed order, to find highest 'decimal' first
+        for item in reversed(convert_table):   
             if  item['decimal'] <= original_number:
                 result_list.append(item['roman'])
                 original_number = original_number - item['decimal']
                 break
     else:
         return "".join(result_list)
-
- 
-    
-
-
-if __name__ == "__main__":
-    print convert_to_roman(3999)
-    
-    
-    
-
-
-
-

@@ -1,0 +1,21 @@
+body { border:0; padding:10;font:14px Arial, Helvetica, sans-serif; background: url(../img/bg-tile.png) repeat; color: #444;text-align:center;}
+h1 {width: 60%; margin: auto; font-size: 16px; font-family: Georgia, Times New Roman, serif; font-weight: normal; font-style: italic; color: #777;font-weight: bold; text-align: center; }
+
+.center {
+    margin: auto;
+    width: 60%;
+    border:3px solid #8AC007;
+    padding: 10px;
+}
+
+
+
+ul.errorlist {
+    color: red;
+}
+
+.result {
+    color: blue;
+}
+
+.original_integer { width:40px; }

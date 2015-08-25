@@ -1,8 +1,22 @@
+<html>
+<head>
+    <title>Convert Interger to Roman</title>
+	 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" />
+</head>
+<body>
 <h1>Roman number convert Result</h1>
 
-Result of converting {{original_number}}  into Roman numerial is:  {{result}}
+<div class="center">
+
+<p>Result of converting {{original_number}}  into Roman numerial is:  
+     <div class="result">{{result}}</div>
+</P>
 
 <form action="{% url 'roman:index' %}" method='get'>{% csrf_token %}
-<input type='submit' value='return' />
+<input type='submit' value='home' />
 </form>
 
+</div>
+
+</body>
+</html>
