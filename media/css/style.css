@@ -1,4 +1,27 @@
+* {
+  margin: 15;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 50px; 
+}
+.site-footer {
+  background: Azure ;
+}
+
 body { border:0; padding:10;font:14px Arial, Helvetica, sans-serif; background: url(../img/bg-tile.png) repeat; color: #444;text-align:center;}
+
 h1 {width: 60%; margin: auto; font-size: 16px; font-family: Georgia, Times New Roman, serif; font-weight: normal; font-style: italic; color: #777;font-weight: bold; text-align: center; }
 
 .center {
@@ -19,3 +42,4 @@ ul.errorlist {
 }
 
 .original_integer { width:40px; }
+

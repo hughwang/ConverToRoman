@@ -19,15 +19,17 @@ def convert_to_roman (original_number):
     )
     
     # to convert x into roman numerial:
-    #1.From the above table, find the highest 'decimal' value v that is less than or equal to the 'decimal' number x 
+    # 1.From the above table, find the highest 'decimal' value v that is less than or equal to the 'decimal' number x 
     #  and its corresponding roman numeral n:
     
-    #2.Write the roman numeral n that you found and subtract its value v from x:
+    # 2.Write the roman numeral n that you found and subtract its value v from x:
     #  x = x - v
 
-    #3.Repeat stages 1 and 2 until you get zero result of x.
+    # 3.Repeat stages 1 and 2 until you get zero result of x.
     
+    # use a list to store temporary calcualted roman numeral
     result_list=[]
+
     while(original_number > 0):
         # visit the convert_table in reversed order, to find highest 'decimal' first
         for item in reversed(convert_table):   

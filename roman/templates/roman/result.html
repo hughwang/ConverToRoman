@@ -1,9 +1,7 @@
-<html>
-<head>
-    <title>Convert Interger to Roman</title>
-	 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" />
-</head>
-<body>
+{% extends "roman/base.html" %}
+
+{% block content %}
+
 <h1>Roman number convert Result</h1>
 
 <div class="center">
@@ -15,10 +13,9 @@
 <form action="{% url 'roman:index' %}" method='get'>{% csrf_token %}
 <input type='submit' value='home' />
 </form>
-
+<br>
 <img src="{{ MEDIA_URL }}/img/roman_cock.jpg" width="160" height="145">
 
 </div>
 
-</body>
-</html>
+{% endblock %}

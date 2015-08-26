@@ -1,9 +1,7 @@
-<html>
-<head>
-    <title>Convert Interger to Roman</title>
-	 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" />
-</head>
-<body>
+{% extends "roman/base.html" %}
+
+{% block content %}
+
 <h1>Integer to Roman number converter</h1>
 <div class="center">
 <form action="{% url 'roman:index' %}" method='post'>{% csrf_token %}
@@ -11,5 +9,4 @@
 <input type='submit' value='Submit' />
 </form>
 </div>
-</body>
-</html>
+{% endblock %}

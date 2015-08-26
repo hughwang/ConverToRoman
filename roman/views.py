@@ -18,7 +18,7 @@ def index(request):
             roman_number = convert_to_roman(original_number)
             context = {
                 'original_number' : original_number,
-                'result' : roman_number
+                'result' : roman_number,
             }
             return render(request, 'roman/result.html', context)
  
