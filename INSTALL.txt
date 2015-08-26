@@ -1,0 +1,15 @@
+How to get the source code?
+    git clone  https://github.com/hughwang/ConverToRoman.git
+
+How  to set up and run the system?
+    suppose the code was downloded to
+    d:\CoverToRoman
+    please make sure 
+    Python ( 2.7 above) , Django (1.6.1 above) was installed on the machine
+    
+    cd d:\ConverToRoman
+    python manage.py runserver
+
+    on web browser, open:
+    http://127.0.0.1:8000/roman/
+    then user can input integer and submit.

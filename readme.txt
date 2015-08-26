@@ -2,26 +2,12 @@ This web application was written in a Python/Django web framework.
 The web application have a form to accept a base-10 integer between 1 and 3999, 
 and upon submission to the backend, calculate and display that integer represented as Roman numerals.
 
-How to get the source code?
-    git clone  https://github.com/hughwang/ConverToRoman.git
-
-How  to run the system?
-    suppose the code was downloded to
-    d:\CoverToRoman
-    Python ( 2.7 above) , Django (1.6.1 above) was installed on the machine
-    
-    cd d:\ConverToRoman
-    python manage.py runserver
-
-    on web browser, open:
-    http://127.0.0.1:8000/roman/
-    then user can input integer and submit.
-
 How to run Unit Tests for the system?
     python manage.py test
 
 Features implemented in the system:
     .  Input data validation, Only integer between 1 to 3999 is allowed to input
+       regular expression used for validate input as a digit that is 1 to 4 length
     .  Django form used in the system
     .  use css file to make the web page looks better
     .  system tested on Windows 7
