@@ -6,18 +6,16 @@ How to run Unit Tests for the system?
     python manage.py test
 
 Features implemented in the system:
-    .  Input data validation, Only integer between 1 to 3999 is allowed to input
-       regular expression used for validate input as a digit that is 1 to 4 length
-    .  Django form used in the system
-    .  use css file to make the web page looks better
-    .  system tested on Windows 7
+    .  Input data validation, only integer between 1 to 3999 is accepted
+    .  Regular expression used for validate input as a number
+    .  Django Forms used in the system
+    .  Use css file to make the web page looks better
+    .  System tested on Windows 7
     .  use Django template for rendering web pages
 
 
 
 Sample code reference:
-
-http://pythoncentral.io/how-to-use-python-django-forms/
 
 http://www.rapidtables.com/convert/number/how-number-to-roman-numerals.htm
 
@@ -28,3 +26,8 @@ https://docs.djangoproject.com/en/1.8/intro/tutorial05/
 
 CSS reference
 http://www.w3schools.com/cssref/default.asp
+
+Book Reference:
+
+Two Scoops of Jango , Best Practices for Ddango 1.5
+Dive into Python
